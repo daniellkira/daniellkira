@@ -1,0 +1,117 @@
+:root {
+    --cor-principal: rgb(12, 20, 15);
+    --cor-secundaria: rgb(39, 39, 226);
+    --cor-destaque: rgb(206, 58, 58);
+    --cor-brancoPadrao: rgb(white);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h5{
+    color: var(white);
+    font: weight 700px;;
+}
+
+footer a {
+    color: var(white)
+}
+
+footer a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Navegação por setas nos modais */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 10px;
+}
+
+.modal-body img {
+  max-height: 70vh;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+/* cor do link whatsapp dentro do modal*/
+.modal-footer a {
+  color: var(--cor-brancoPadrao);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-footer a:hover {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+/* Botões de navegação */
+.modal .position-absolute {
+  color: white;
+  font-weight: bold;
+  z-index: 1050;
+  opacity: 0.8;
+}
+
+.modal .position-absolute:hover {
+  opacity: 1;
+  color: var(--cor-destaque);
+}
+/* codigo para deixar as imagnes do card do mesmo tamanho*/
+
+.card-img-top {
+  height: 200px; /* ajuste conforme necessário */
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+/*links de contato*/
+
+footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-top: 2px solid var(--cor-principal);
+}
+
+footer h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: var(--cor-secundaria);
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+}
+
+footer a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--cor-destaque);
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+

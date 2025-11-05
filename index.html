@@ -4,43 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Portifólio</title>
 </head>
 
 <body>
     <header class="container text-center">
-        <img src="img/ft perfil.jpg" alt="Meu Avatar="class="rounded-circle" width="150" height="150" srcset="">
+        <img src="img/ft perfil.jpg" alt="Meu Avatar=" class="rounded-circle" width="150" height="150" srcset="">
         <p class="lead">Eu Sou o Daniel</p>
-        <h1> Eu sou conhecido com o Kira</h1>
-        <p>Eu sou professor Estadual, inventor, eletricista e técnico em instalações e manutenções diversas.</p>
-        <p>minhas Habilidades</p>
+        <h1> Eu sou conhecido como Kira</h1>
+        <p>Sou professor estadual, inventor curioso por natureza, eletricista experiente e técnico especializado em instalações e manutenções diversas. Ao longo da minha trajetória, desenvolvi projetos escolares criativos, soluções técnicas inovadoras e serviços personalizados que unem conhecimento, prática e dedicação. Tenho habilidades em organização, reparos, criação de dispositivos, e estou sempre em busca de novos desafios que estimulem minha mente e contribuam para transformar ideias em realidade..</p>
+        <p>minhas Habilidades incluen diversas áreas de conhecimento, por exemplo: mecânica, programação, manutenção em computadores e hardwares diversos, pedreiro, marceneiro, etc.</p>
         <div>
             <p class="badge text-bg-primary">Professor </p>
             <p class="badge text-bg-primary">Eletricista</p>
-            <p class="badge text-bg-success">Habilidades diversas</p>
+            <p class="badge text-bg-primary">Habilidades diversas</p>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
             crossorigin="anonymous"></script>
     </header>
-    <main class="conteiner">
+    <main class="conteiner mt-5">
         <h2>Meus projetos</h2>
-        <div class="row"></div>
-        <div class="col-md-4"></div>
-        <div><div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div></div>
-        
+
+        <div class="row justify-content-center gx-20 px-5"> <!--alinhamento dos cards-->
+
+
+            <!-- projeto 1 -->
+            <div class="col-md-4">
+                <div class="card" style="width:auto;">
+                    <img src="img/capa.jpg" class="card-img-top" alt="Fotos">
+                    <div class="card-body">
+                        <h5 class="card-title">Professor</h5>
+                        <p class="card-text">Algumas atividades realizadas, experimentos ou projetos.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja
+                            as fotos</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="col-md-4">
+                <div class="card" style="width:auto;">
+                    <img src="img/makeda-14.jpg" class="card-img-top" alt="Fotos">
+                    <div class="card-body">
+                        <h5 class="card-title">Eletricista</h5>
+                        <p class="card-text">Algumas instalações e manutenções realizadas.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Veja
+                            as fotos</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 3 -->
+            <div class="col-md-4">
+                <div class="card" style="width:auto;">
+                    <img src="img/organized-tool-wall-stockcake.jpg" class="card-img-top" alt="Fotos">
+                    <div class="card-body">
+                        <h5 class="card-title">Outras realizações</h5>
+                        <p class="card-text"> Diversos serviços, invenções e projetos.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Veja
+                            as fotos</button>
+                    </div>
+                </div>
+            </div>
+
 
     </main>
+ 
+<!-- Modal Professor -->
+<div class="modal fade" id="modal1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white position-relative">
+      <span class="position-absolute top-50 start-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(0, -1)">&#10094;</span>
+      <span class="position-absolute top-50 end-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(0, 1)">&#10095;</span>
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Projetos e aulas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modal-img-0" src="img/professor/1.jpg" class="img-fluid rounded" alt="Professor">
+      </div>
+      <div class="modal-footer justify-content-between">
+        
+        <a href="https://api.whatsapp.com/send?phone=5555119765485&text=Oi Daniel, quero saber sobre seus projetos como professor">Whatsapp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Eletricista -->
+<div class="modal fade" id="modal2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white position-relative">
+      <span class="position-absolute top-50 start-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(1, -1)">&#10094;</span>
+      <span class="position-absolute top-50 end-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(1, 1)">&#10095;</span>
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Instalações e manutenções</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modal-img-1" src="img/eletricista/1.jpg" class="img-fluid rounded" alt="Eletricista">
+      </div>
+      <div class="modal-footer justify-content-between">
+        
+        <a href="https://api.whatsapp.com/send?phone=5555119765485&text=Oi Daniel, quero saber sobre seus serviços de eletricista">Whatsapp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Habilidades Diversas -->
+<div class="modal fade" id="modal3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark text-white position-relative">
+      <span class="position-absolute top-50 start-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(2, -1)">&#10094;</span>
+      <span class="position-absolute top-50 end-0 translate-middle-y fs-1 px-3 cursor-pointer" onclick="changePhoto(2, 1)">&#10095;</span>
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Projetos diversos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modal-img-2" src="img/diversos/1.jpg" class="img-fluid rounded" alt="Diversos">
+      </div>
+      <div class="modal-footer justify-content-between">
+        
+        <a href="https://api.whatsapp.com/send?phone=5555119765485&text=Oi Daniel, quero saber sobre seus projetos diversos">Whatsapp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Imagens da galeria  -->
+
+<script>
+  const galeria = [
+    ["img/professor/2.jpg", "img/professor/3.jpg", "img/professor/6.jpg", "img/professor/7.jpg", "img/professor/8.jpg", "img/professor/9.jpg", "img/professor/10.jpg", "img/professor/11.jpg",  "img/professor/13.jpg",  "img/professor/15.jpg", "img/professor/16.jpg", "img/professor/18.jpg"],
+    ["img/eletricista/1.jpg", "img/eletricista/2.jpg",],
+    ["img/diversos/1.jpg", "img/diversos/2.jpg", "img/diversos/3.jpg"]
+  ];
+
+  let indices = [0, 0, 0];
+
+  function changePhoto(modalIndex, direction) {
+    indices[modalIndex] += direction;
+    const total = galeria[modalIndex].length;
+    if (indices[modalIndex] < 0) indices[modalIndex] = total - 1;
+    if (indices[modalIndex] >= total) indices[modalIndex] = 0;
+    document.getElementById(`modal-img-${modalIndex}`).src = galeria[modalIndex][indices[modalIndex]];
+  }
+</script>
+
+    <footer class="container py-5">
+
+
+        <h2>Entre em contato</h2>
+
+
+
+        <div> <i class="bi bi-github"></i> <a href="https://github.com/daniellkira">Github</a></div>
+
+        <div> <i class="bi bi-whatsapp"></i> <a
+                href="https://api.whatsapp.com/send?phone=5555119765485&text=Oi%20Daniel%2C%20eu%20queria%20saber%20sobre...54-8547">Whatsapp</a>
+        </div>
+
+        <div> <i class="bi bi-envelope-at"></i> <a href="mailto:danielgamet@hotmail.com">Enviar e-mail</a></div>
+
+
+
+        <p class="my-5">© Copyrigth 2025. Produzido por Daniel L. Kira</p>
+
+    </footer>
 </body>
 
 </html>
